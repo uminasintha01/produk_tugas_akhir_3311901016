@@ -1,0 +1,123 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "clovelced-plugin-audiomanagement": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "com-badrit-base64": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "com.ourcodeworld.preventscreenshots": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-app-exit": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-app-review": {
+      "ANDROID_PLAY_CORE_VERSION": "1.8.+",
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-dreamover-uid": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-extended-device-information": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-fingerprint-aio": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-local-notification": {
+      "ANDROID_SUPPORT_V4_VERSION": "26.+",
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-nativeaudio": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-unique-device-id2": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova.plugins.diagnostic": {
+      "ANDROIDX_VERSION": "1.0.0",
+      "ANDROIDX_APPCOMPAT_VERSION": "1.3.1",
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "phonegap-plugin-local-notification": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-support-android-plugin": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    }
+  }
+}

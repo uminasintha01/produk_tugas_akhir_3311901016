@@ -1,0 +1,21 @@
+<ion-content  style="--background: #ccc url('../../../../assets/images/phone/camera/BG.png') no-repeat center center / cover;">
+  <div class="center">
+    <img src="../../../../assets/images/phone/camera/logo.png" alt="" style="margin-top: 23%;">
+    <div class="middle">
+      <img src="../../../../assets/images/phone/vibrate/vibrate.png" alt="">
+        <div class="title">Silahkah Tes Getar Anda</div>
+        <div class="instruksi">Instruksi</div>
+        <div style="text-align: left;">
+          <p class="f-5"><ion-icon name="radio-button-on" style="color: lightgreen; margin-top: 20px;"></ion-icon> Silahkan Tekan Tombol Vibrate</p>
+          <p class="f-5"><ion-icon name="radio-button-on" style="color: lightgreen;"></ion-icon> Silahkan Tekan Tombol Stop Untuk Berhenti</p>
+        </div>
+        <button class="button round" icon-only (click)="vibrate()" style="margin-top: 10%;">
+          Vibrate
+        </button>
+        <div (click)="skip()" style="margin-right: 30%; margin-left: 30%; margin-top: 25%;">
+           <p class="skip">Lewati <a style="margin-left: 10px;">>></a></p> 
+           <hr>
+        </div>
+    </div>
+  </div>
+</ion-content>

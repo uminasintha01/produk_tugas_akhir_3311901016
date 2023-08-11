@@ -1,0 +1,221 @@
+
+
+  <ion-content style="--background: #ccc url('../../../../assets/images/default/background.png') no-repeat center center / cover;">
+    <ion-toolbar style="padding-top: 10%; --background: transparant;">
+      <ion-segment mode="md" [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="0" style=" --indicator-height: none;">
+          Qr Aktif
+          <hr>
+        </ion-segment-button>
+
+      </ion-segment>
+    </ion-toolbar>
+
+
+        <div class="center" style="margin-left: 10%;">
+          <div *ngFor="let item of qrLaptop">
+            <div class="row">
+              <div class="col">
+                <ion-card style="width: 310px; height: 450px; border-radius: 10%;">
+                  <img src="../../../../assets/images/default/zfix_fade.png" alt="" style="margin-top: 25px;">
+                  <div *ngIf = "item.status == 4 && item.jenis_layanan == 2">
+                    <div class="title">Laptop</div>
+                    <img class="middle" src="../../../../assets/images/default/barcode_sq.png" alt="">
+                    <ion-card-content >
+                      <ngx-qrcode 
+                        [width]=200
+                        value = "{{item.id}}">
+                      </ngx-qrcode>
+
+                      <div *ngFor="let vou of vouchers">
+                        <div *ngIf = "item.voucher_id == vou.id ">
+                           <strong>Voucher Key: {{vou.voucher_key}}</strong>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div>
+                           <strong>Harga: Rp.{{item.price | number}}</strong>
+                        </div>
+                      </div>
+
+                      <img class="garis" src="../../../../assets/images/default/Line 32.png" alt="">
+                      <div *ngFor="let loc of stores">
+                        <div *ngIf = "item.lokasi_trade == loc.id ">
+                          <p class="f-5" style="margin-top: 20px;">Kunjungi toko <strong>{{loc.name}}</strong></p>
+                          <p class="f-5">dan scan barcode ini</p> 
+                        </div>
+                      </div>
+                    </ion-card-content>
+                  </div>
+                </ion-card>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div *ngFor="let item of qrTV">
+              <div class="col">
+                <ion-card style="width: 310px; height: 450px; border-radius: 10%;">
+                  <img src="../../../../assets/images/default/zfix_fade.png" alt="" style="margin-top: 25px;">
+                  <div *ngIf = "item.status == 4 && item.jenis_layanan == 3">
+                    <div class="title">TV</div>
+                    <img class="middle" src="../../../../assets/images/default/barcode_sq.png" alt="">
+                    <ion-card-content >
+                      <ngx-qrcode 
+                      [width]=200
+                      value = "{{item.id}}">
+                      </ngx-qrcode>
+
+                      <div *ngFor="let vou of vouchers">
+                        <div *ngIf = "item.voucher_id == vou.id ">
+                           <strong>Voucher Key: {{vou.voucher_key}}</strong>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div>
+                           <strong>Harga: Rp. {{item.price | number}}</strong>
+                        </div>
+                      </div>
+                      
+
+                      <img class="garis" src="../../../../assets/images/default/Line 32.png" alt="">
+                      <div *ngFor="let loc of stores">
+                        <div *ngIf = "item.lokasi_trade == loc.id ">
+                          <p class="f-5" style="margin-top: 20px;">Kunjungi toko <strong>{{loc.name}}</strong></p>
+                          <p class="f-5">dan scan barcode ini</p>
+                        </div>
+                      </div>
+                    </ion-card-content>
+                  </div>
+                </ion-card>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div *ngFor="let item of qrPS">
+              <div class="col">
+                <ion-card style="width: 310px; height: 450px; border-radius: 10%;">
+                  <img src="../../../../assets/images/default/zfix_fade.png" alt="" style="margin-top: 25px;">
+                  <div *ngIf = "item.status == 4 && item.jenis_layanan == 4">
+                    <div class="title">PS</div>
+                    <img class="middle" src="../../../../assets/images/default/barcode_sq.png" alt="">
+
+                    <ion-card-content >
+                      <ngx-qrcode 
+                      [width]=200
+                      value = "{{item.id}}" >
+                      </ngx-qrcode>
+
+                      <div *ngFor="let vou of vouchers">
+                        <div *ngIf = "item.voucher_id == vou.id ">
+                           <strong>Voucher Key: {{vou.voucher_key}}</strong>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div>
+                           <strong>Harga: Rp.{{item.price | number}}</strong>
+                        </div>
+                      </div>
+
+                      <img class="garis" src="../../../../assets/images/default/Line 32.png" alt="">
+                      <div *ngFor="let loc of stores">
+                        <div *ngIf = "item.lokasi_trade == loc.id ">
+                          <p class="f-5" style="margin-top: 20px;">Kunjungi toko <strong>{{loc.name}}</strong></p>
+                          <p class="f-5">dan scan barcode ini</p> 
+                        </div>
+                      </div>
+                    </ion-card-content>
+                  </div>
+                </ion-card>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div *ngFor="let item of qrKulkas">
+              <div class="col">
+                <ion-card style="width: 310px; height: 450px; border-radius: 10%;">
+                  <img src="../../../../assets/images/default/zfix_fade.png" alt="" style="margin-top: 25px;">
+                  <div *ngIf = "item.status == 4 && item.jenis_layanan == 5">
+                    <div class="title">Kulkas</div>
+                    <img class="middle" src="../../../../assets/images/default/barcode_sq.png" alt="">
+
+                    <ion-card-content >
+                      <ngx-qrcode 
+                      [width]=200
+                      value = "{{item.id}}" >
+                      </ngx-qrcode>
+
+                      <div *ngFor="let vou of vouchers">
+                        <div *ngIf = "item.voucher_id == vou.id ">
+                           <strong>Voucher Key: {{vou.voucher_key}}</strong>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div>
+                           <strong>Harga: Rp.{{item.price | number}}</strong>
+                        </div>
+                      </div>
+
+                      <img class="garis" src="../../../../assets/images/default/Line 32.png" alt="">
+                      <div *ngFor="let loc of stores">
+                        <div *ngIf = "item.lokasi_trade == loc.id ">
+                          <p class="f-5" style="margin-top: 20px;">Kunjungi toko <strong>{{loc.name}}</strong></p>
+                          <p class="f-5">dan scan barcode ini</p> 
+                        </div>
+                      </div>
+                    </ion-card-content>
+                  </div>
+                </ion-card>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div *ngFor="let item of qrMesinCuci">
+              <div class="col">
+                <ion-card style="width: 310px; height: 450px; border-radius: 10%;">
+                  <img src="../../../../assets/images/default/zfix_fade.png" alt="" style="margin-top: 25px;">
+                  <div *ngIf = "item.status == 4 && item.jenis_layanan == 6">
+                    <div class="title">Mesin Cuci</div>
+                    <img class="middle" src="../../../../assets/images/default/barcode_sq.png" alt="">
+
+                    <ion-card-content >
+                      <ngx-qrcode 
+                      [width]=200
+                      value = "{{item.id}}" >
+                      </ngx-qrcode>
+
+                      <div *ngFor="let vou of vouchers">
+                        <div *ngIf = "item.voucher_id == vou.id ">
+                           <strong>Voucher Key: {{vou.voucher_key}}</strong>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div>
+                           <strong>Harga: Rp.{{item.price | number}}</strong>
+                        </div>
+                      </div>
+
+                      <img class="garis" src="../../../../assets/images/default/Line 32.png" alt="">
+                      <div *ngFor="let loc of stores">
+                        <div *ngIf = "item.lokasi_trade == loc.id ">
+                          <p class="f-5" style="margin-top: 20px;">Kunjungi toko <strong>{{loc.name}}</strong></p>
+                          <p class="f-5">dan scan barcode ini</p> 
+                        </div>
+                      </div>
+                    </ion-card-content>
+                  </div>
+                </ion-card>
+              </div>
+            </div>
+          </div>
+
+        </div>
+  </ion-content>
+    

@@ -1,0 +1,84 @@
+  
+<!-- <ion-header class="header">
+  <ion-toolbar>
+    
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  
+  <!-- <div class="container bg-white"> -->
+    <img class="bg-image" src="../../../../assets/images/home/bg_home.png" alt="">
+    <img class="title-image" src="../../../../assets/images/home/zfix.png" alt="">
+    <ion-buttons style="margin-top: 50px; margin-left: 10px;">
+      <!-- <ion-button (click)="logout()">
+        <ion-icon  class="icon-b" style="color: #284483; font-size: 30px;" name="log-out"></ion-icon>
+      </ion-button> -->
+
+      <ion-button id="notification-button" (click)="popclick($event)" style="margin-left: 85%;">
+        <ion-icon name="notifications" style=" color: #284483; font-size: 100px;"></ion-icon>
+        <ion-badge *ngIf = "count_notification != 0" id="notifications-badge" style=" font-size: 5px;">{{count_notification}}</ion-badge> 
+      </ion-button>
+
+    </ion-buttons>
+    <div class="div-h1">
+      <h1>Your Trade In</h1>
+    </div>
+    <div class="middle">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 (click)="goTo(1)">
+            <ion-card >
+              <img src="../../../../assets/images/home/mobile/mobile_trade.png" alt="">
+              <!-- <ion-icon class="icon-a" name="phone-portrait-outline"></ion-icon>
+              <h2>Scan Handphone<br>/Tablet </h2>   -->
+            </ion-card>
+          </ion-col>
+          <ion-col col-6 (click)="goTo(2)">
+            <ion-card>
+              <img src="../../../../assets/images/home/television/tv_trade.png" alt="">
+              <!-- <ion-icon  class="icon-a" name="tv-sharp"></ion-icon>
+              <h2>Scan Television </h2> -->
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6  (click)="goTo(3)">
+            <ion-card>
+              <img src="../../../../assets/images/home/laptop/laptop_trade.png" alt="">
+              <!-- <ion-icon  class="icon-a" name="laptop-outline"></ion-icon>
+              <h2>Scan Laptop</h2> -->
+            </ion-card>
+          </ion-col>
+          <ion-col col-6 (click)="goTo(4)">
+            <ion-card>
+              <img src="../../../../assets/images/home/ps/ps_trade.png" alt="">
+              <!-- <ion-icon  class="icon-a" name="game-controller-outline"></ion-icon>
+              <h2>Scan PlayStation</h2> -->
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6  (click)="goTo(5)">
+            <ion-card>
+              <img src="../../../../assets/images/home/kulkas/kulkas.png" alt="">
+              <!-- <ion-icon  class="icon-a" name="laptop-outline"></ion-icon>
+              <h2>Scan Laptop</h2> -->
+            </ion-card>
+          </ion-col>
+          <ion-col col-6 (click)="goTo(6)">
+            <ion-card>
+              <img src="../../../../assets/images/home/mesin_cuci/mesin_cuci.png" alt="">
+              <!-- <ion-icon  class="icon-a" name="game-controller-outline"></ion-icon>
+              <h2>Scan PlayStation</h2> -->
+            </ion-card>
+          </ion-col>
+        </ion-row>
+  
+      </ion-grid>
+    </div>
+
+  <!-- </div> -->
+    
+</ion-content>

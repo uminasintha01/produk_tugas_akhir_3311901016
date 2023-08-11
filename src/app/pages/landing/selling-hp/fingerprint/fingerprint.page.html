@@ -1,0 +1,35 @@
+<ion-content  style="--background: #ccc url('../../../../assets/images/phone/camera/BG.png') no-repeat center center / cover;">
+  <div class="center">
+    <img src="../../../../assets/images/phone/camera/logo.png" alt="" style="margin-top: 23%;">
+    <div class="middle">
+      <img src="../../../../assets/images/phone/wifi+finger/fingerprint.png" alt="">
+        <div class="title">Silahkah Tes FingerPrint Anda</div>
+        <button class="button round" icon-only (click)="authenticate()" style="margin-top: 10%;">
+          Tap untuk Memulai
+        </button>
+        <div (click)="skip()" style="margin-right: 30%; margin-left: 30%; margin-top: 25%;">
+           <p class="skip">Lewati <a style="margin-left: 10px;">>></a></p> 
+           <hr>
+        </div>
+    </div>
+  </div>
+</ion-content>
+
+
+<!-- <ion-content class="background" [fullscreen]="true">
+  <ion-card>
+   
+    <ion-card-content>
+      <img src="../../../../../assets/images/finger.png" alt="" class="wifi">
+      
+
+      <h1>FingerPrint </h1>
+
+       <button class="btn-done" (click)="submit()" center-block> Next </button>
+    </ion-card-content>
+  </ion-card>
+  <div class="bg-image" ><img  src="../../../assets/images/bawah_putih.svg" alt=""></div> 
+ 
+  
+</ion-content> -->
+

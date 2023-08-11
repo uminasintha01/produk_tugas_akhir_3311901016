@@ -1,0 +1,49 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">Hubungi Kami</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img class="bg-image" src="../../../../assets/images/home/bg_home.png" alt="">
+  <ion-card>
+    <ion-card-content>
+      <p align="center"><ion-img src="./assets/images/contact_mascots.png" width="128"></ion-img></p>
+        <!-- <ion-img src="./assets/images/5.0x/contact_mascot.png"></ion-img> -->
+      <div class="ion-text-center">
+        Kami Siap Membantu Anda
+      </div>
+
+      <ion-text>
+        <p align="center">
+          Silahkan menghubungi kami melalui beberapa pilihan opsi di bawah ini. Customer Service
+          kami siap melayani segala pernyataan setiap saat.
+        </p>
+      </ion-text>
+
+      <ion-grid style="padding-left: 20px; padding-top: 20px;">
+        <ion-row> 
+          <div class="span6" style="padding-right:13px; border-right: 1px solid #ccc;">
+            <a href="tel:+62 877-0477-5575"><img class="icon-images" src="./assets/images/3.0x/contact_call_icon.png" /></a>
+            <!-- <img href="tel:555-555-5555" src="./assets/images/3.0x/contact_call_icon.png"> -->
+            <h3>Call</h3>
+          </div>
+        
+          <div class="span6" style="padding-left:13px; padding-right:13px; border-right: 1px solid #ccc;">
+            <a href="https://api.whatsapp.com/send?phone=6287704775575" ><img class="icon-images" src="./assets/images/3.0x/contact_chat_icon.png"></a>
+              <h3>Chat</h3>
+          </div>
+
+          <div class="span6" style="padding-left: 13px;">
+            <a href="mailto:cs@zfix.id" ><img class="icon-images" src="./assets/images/3.0x/contact_email_icon.png"></a>
+            <h3>Email</h3>
+          </div>
+        </ion-row>
+      </ion-grid>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

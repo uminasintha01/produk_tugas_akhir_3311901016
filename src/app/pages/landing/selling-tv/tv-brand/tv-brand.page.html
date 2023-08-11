@@ -1,0 +1,337 @@
+<ion-content style="--background: #ccc url('../../../../assets/images/default/background.png') no-repeat center center / cover;">
+    <div class="div-h1">
+      <h1>Your Trade In</h1>
+    </div>
+    <div class="content">
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <ion-label>Merk</ion-label>
+        <ion-select (ionChange) = "this.brand = $event.target.value">
+          <ion-select-option *ngFor="let row_brand of data_brand" value="{{row_brand.brand}}" placeholder="Pilih..">{{row_brand.brand}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <ion-label>Jenis TV</ion-label>
+        <ion-select (ionChange) = "this.jenis= $event.target.value">  
+          <ion-select-option *ngFor="let row_jenis of data_jenis" [value]="row_jenis.jenis_tv" placeholder="Pilih..">{{row_jenis.jenis_tv}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <ion-label>Ukuran</ion-label>
+        <ion-select (ionChange) = "this.inch = $event.target.value">
+          <ion-select-option *ngFor="let row_inch of data_inch" value="{{row_inch.inch}}" placeholder="Pilih..">{{row_inch.inch}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <ion-label class="ion-text-wrap">Tempat anda melakukan Trade In</ion-label>
+        <ion-select (ionChange)="this.lokasi_trade = $event.target.value">
+            <ion-select-option *ngFor="let item of stores" value="{{item.id}}">{{item.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-grid >
+        <ion-row size="auto">
+          <ion-col >
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Kondisi TV</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="kondisi_tvSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Nyala</ion-label>
+                <ion-radio slot="start" value="Nyala"></ion-radio>
+              </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Mati</ion-label>
+                <ion-radio  slot="start" value="Mati"></ion-radio>
+              </ion-item>   
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid >
+        <ion-row size="auto">
+          <ion-col >
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Kondisi Layar TV</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="kondisi_layarSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Normal</ion-label>
+                <ion-radio slot="start" value="Normal"></ion-radio>
+              </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Layar Bergaris</ion-label>
+                <ion-radio  slot="start" value="Layar Bergaris"></ion-radio>
+              </ion-item>   
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Whitespot/Titik hitam</ion-label>
+                <ion-radio  slot="start" value="Whitespot/Titik hitam"></ion-radio>
+              </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Lcd Pecah</ion-label>
+                <ion-radio  slot="start" value="Lcd Pecah"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid >
+        <ion-row size="auto">
+          <ion-col > 
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Kondisi layar dalam</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="inner_valueSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Layar berfungsi normal</ion-label> 
+                <ion-radio slot="start" value="Layar berfungsi normal"></ion-radio>
+              </ion-item>
+            
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">
+                <ion-label class="ion-text-wrap">Layar putih/titik hitam</ion-label>
+                <ion-radio slot="start" value="Layar putih/titik hitam"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <ion-grid >
+        <ion-row size="auto">
+          <ion-col >
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Kondisi layar luar</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="outer_valueSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Layar bergores</ion-label>
+                <ion-radio slot="start" value="Layar bergores"></ion-radio>
+              </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Layar tidak bergores</ion-label>
+                <ion-radio  slot="start" value="Layar tidak bergores"></ion-radio>
+              </ion-item>   
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col >
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Kondisi body</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="condition_valueSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">                 
+                <ion-label class="ion-text-wrap">tidak bergores/penyok</ion-label>
+                <ion-radio slot="start" value="tidak bergores/penyok"></ion-radio> 
+              </ion-item>
+                <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">  
+                  <ion-label class="ion-text-wrap">beberapa goresan/penyok</ion-label>
+                  <ion-radio slot="start" value="beberapa goresan/penyok"></ion-radio>
+                </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">  
+                <ion-label class="ion-text-wrap">Banyak goresan/penyok</ion-label>
+                <ion-radio slot="start" value="Banyak goresan/penyok"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid *ngIf="jenis=='LED'">
+        <ion-row size="auto">
+          <ion-col > 
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Kondisi Tombol/Port (HDMI,Antenna) Pada TV LED:</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="portSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Berfungsi normal</ion-label> 
+                <ion-radio slot="start" value="Berfungsi Normal"></ion-radio>
+              </ion-item>
+            
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">
+                <ion-label class="ion-text-wrap">Tidak Berfungsi</ion-label>
+                <ion-radio slot="start" value="Tidak Berfungsi"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid *ngIf="jenis=='Smart TV'">
+        <ion-row size="auto">
+          <ion-col > 
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Kondisi Tombol/Port (HDMI,Antenna) Pada Smart TV:</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="portSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Berfungsi normal</ion-label> 
+                <ion-radio slot="start" value="Berfungsi Normal"></ion-radio>
+              </ion-item>
+            
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">
+                <ion-label class="ion-text-wrap">Tidak Berfungsi</ion-label>
+                <ion-radio slot="start" value="Tidak Berfungsi"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid *ngIf="jenis=='Smart TV'">
+        <ion-row size="auto">
+          <ion-col > 
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Wifi pada Smart TV:</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="wifiSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">   
+                <ion-label class="ion-text-wrap">Berfungsi</ion-label> 
+                <ion-radio slot="start" value="Berfungsi"></ion-radio>
+              </ion-item>
+            
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">
+                <ion-label class="ion-text-wrap">Tidak Berfungsi</ion-label>
+                <ion-radio slot="start" value="Tidak Berfungsi"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col >
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Suara Televisi</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="suaraSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;"> 
+                <ion-label>Normal</ion-label>
+                <ion-radio slot="start" value="Normal"></ion-radio>
+              </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">  
+                <ion-label>Sember</ion-label>
+                <ion-radio slot="start" value="Sember"></ion-radio>
+              </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">
+                <ion-radio slot="start" value="Tidak Ada Suara"></ion-radio>
+                <ion-label class="ion-text-wrap">Tidak Ada Suara</ion-label>
+              </ion-item>
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col >
+            <div class="row">
+              <div class="col">
+                <div class="title">
+                  <div>Kelengkapan</div>
+                </div>
+              </div>
+              <div class="col" style="padding-top: 18px;">
+                <hr>
+              </div>
+            </div>
+            <ion-radio-group [(ngModel)]="addition_valueSelected" >
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;"> 
+                <ion-label>Fullset ( Remote, Kabel Power, Dus)</ion-label>
+                <ion-radio slot="start" value="Fullset(Remote, Kabel Power, Dus)"></ion-radio>
+              </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">  
+                <ion-label>Unit + Remote + Kabel Power</ion-label>
+                <ion-radio slot="start" value="Unit + Remote + Kabel Power"></ion-radio>
+              </ion-item>
+              <ion-item lines="none" style="--background: transparant; --color: #3053A4; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; margin: 5px 0 0 0;">
+                <ion-radio slot="start" value="Unit Only + Kabel Power"></ion-radio>
+                <ion-label class="ion-text-wrap">Unit Only + Kabel Power</ion-label>
+              </ion-item>
+            </ion-radio-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+        <div class="col">
+          <ion-button shape="round" fill="outline" style=" --background:#BCCCF4; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" routerLink="/landing/type">Cancel</ion-button>
+        </div>
+        <div class="col">
+          <ion-button shape="round" style="--background:white; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" (click)="submit()">Agree</ion-button>
+        </div>
+      </div>
+
+    </div>
+  
+  </ion-content>

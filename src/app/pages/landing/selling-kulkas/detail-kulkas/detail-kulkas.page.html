@@ -1,0 +1,124 @@
+<ion-content style="--background: #ccc url('../../../../assets/images/default/background.png') no-repeat center center / cover;">
+  <div class="center">
+    <img src="../../../../assets/images/home/zfix.png" alt="" style="margin-top: 20%;">
+    <div class="middle">
+      <div class="title">Your Trade In</div>
+
+      <ion-item style="--background: transparant; color: #3053A4; margin-top: 10px;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Merk" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ brand }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+  
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Type" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ type }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+      
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Model" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ model }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Kondisi Kulkas" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ condition }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item style="--background: transparant; color: #3053A4;" class="ion-text-wrap">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Kondisi Fisik Kulkas" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ kondisi_fisik }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kondisi Rubber Kulkas</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ rubber }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kondisi Tutup Freezer</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ tutup_freezer }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kelengkapan Tray Kulkas</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ tray }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Fungsi Freezer/Ice Maker/Pendingin</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ ice_maker }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>     
+
+      <ion-input style="color: #3053A4; margin-top: 20px;" value="Estimated Price" readonly></ion-input>
+      <button class="button round" style="background-color: #7f9ee5; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Rp.{{price | number}}</button>
+
+      <div class="row" style="margin-top: 60px;">
+        <div class="col">
+          <button class="button oval" routerLink="/landing/type" style=" background-color: #7f9ee5; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Cancel
+          </button>
+        </div>
+        <div class="col">
+          <button class="button oval" (click)="submit()" style="background-color: white; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Agree
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,48 @@
+{
+  "_from": "git+https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git",
+  "_id": "cordova-ourcodeworld-preventscreenshots@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-ourcodeworld-preventscreenshots",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git",
+    "rawSpec": "https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git",
+    "saveSpec": "git+https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git",
+    "fetchSpec": "https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git#d96f8657cc2bc44bb23be5db68f4307a0d7d10c5",
+  "_spec": "https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git",
+  "_where": "C:\\Users\\ASUS\\Desktop\\zfix_app_angular_http_new7",
+  "author": {
+    "name": "Our Code World"
+  },
+  "bugs": {
+    "url": "https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A free cordova plugin for the android platform to disable screenshots in your application",
+  "homepage": "https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots#readme",
+  "keywords": [
+    "android",
+    "cordova"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "cordova-ourcodeworld-preventscreenshots",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

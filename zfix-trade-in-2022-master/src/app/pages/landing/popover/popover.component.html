@@ -1,0 +1,11 @@
+<ion-list>
+  <ion-list-header> ZFix Trade In </ion-list-header>
+
+  <ion-item *ngFor="let item of notification">
+    <ion-label class="ion-text-wrap">
+      <h3>{{item.type}}</h3>
+      <p>{{item.description}}</p>
+    </ion-label>
+  </ion-item>
+
+</ion-list>

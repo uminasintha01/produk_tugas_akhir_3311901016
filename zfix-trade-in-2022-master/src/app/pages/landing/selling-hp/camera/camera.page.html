@@ -1,0 +1,22 @@
+<ion-content  style="--background: #ccc url('../../../../assets/images/phone/camera/BG.png') no-repeat center center / cover;">
+  <div class="center">
+    <img src="../../../../assets/images/phone/camera/logo.png" alt="" style="margin-top: 23%;">
+    <div class="middle">
+      <img src="../../../../assets/images/phone/camera/camera.png" alt="">
+        <div class="title">Silahkah Tes Camera Anda</div>
+        <p class="f-5">Dengan cara menekan tombol di bawah ini</p>
+        <p class="f-5">Lalu Tunggu selama 5 detik untuk mengambil gambar.</p>
+        <!-- <button class="button round" icon-only (click)="takePicture()" style="margin-top: 10%;">
+          Tap untuk Memulai
+        </button> -->
+        <button class="button round" icon-only (click)="cameras()" style="margin-top: 10%;">
+          Tap untuk Memulai
+        </button>
+        <div (click)="skip()" style="margin-right: 30%; margin-left: 30%; margin-top: 25%;">
+           <p class="skip">Lewati <a style="margin-left: 10px;">>></a></p> 
+           <hr>
+        </div>
+    </div>
+  </div>
+</ion-content>
+

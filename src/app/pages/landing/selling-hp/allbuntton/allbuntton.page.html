@@ -1,0 +1,41 @@
+<ion-content  style="--background: #ccc url('../../../../assets/images/phone/camera/BG.png') no-repeat center center / cover;">
+  <div class="center">
+    <img src="../../../../assets/images/phone/camera/logo.png" alt="" style="margin-top: 23%;">
+    <div class="middle">
+      <img src="../../../../assets/images/phone/button/button.png" alt="">
+        <div class="title">Silahkah Tes Getar Anda</div>
+        <div class="instruksi">Instruksi</div>
+        <div style="text-align: left;">
+          <p class="f-5"><ion-icon name="radio-button-on" style="color: lightgreen; margin-top: 20px;"></ion-icon> Silahkan Tekan Tombol Volume Bawah</p>
+          <p class="f-5"><ion-icon name="radio-button-on" style="color: lightgreen;"></ion-icon> Silahkan Tekan Tombol Volume Atas</p>
+          <p class="f-5"><ion-icon name="radio-button-on" style="color: lightgreen;"></ion-icon> Silahkan Tekan Tombol Trun-Off</p>
+        </div>
+        <button class="button round" icon-only (click)="submit()" style="margin-top: 10%;">
+          Selesai
+        </button>
+        <div (click)="skip()" style="margin-right: 30%; margin-left: 30%; margin-top: 25%;">
+           <p class="skip">Lewati <a style="margin-left: 10px;">>></a></p> 
+           <hr>
+        </div>
+    </div>
+  </div>
+</ion-content>
+
+
+<!-- <ion-content class="background"  [fullscren]="true">
+<ion-card>
+  <ion-card-content>
+
+    <h1>Tes All Button</h1>
+  <h3>*instruksi*</h3>
+  <ul>
+    <li>silahkan tekan tombol volume bawah</li>
+    <li>silahkan tekan tombol volume atas</li>
+    <li>silahkan tekan tombol Trun-off</li>
+  </ul>
+  
+  <button class="btn-done" (click)="submit()" center-block> Done </button>
+</ion-card-content>
+</ion-card>
+<div class="bg-image" ><img  src="../../../assets/images/bawah_putih.svg" alt=""></div>
+</ion-content> -->

@@ -1,0 +1,63 @@
+.bg-image {
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  
+    &.top {
+    top:  0px;
+    transform: translateY(-30px);
+  
+    }
+  
+    &.bottom {
+    bottom: 0px;
+  
+    }
+}
+
+ion-content{
+    justify-content: center;
+    --padding-top: 20px;
+}
+    
+ion-card{
+    border-radius: 15px !important;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    display: flex;
+    width: 90% !important;
+    margin: 5% !important;
+}
+    
+.ion-text-center{
+    padding-top: 20px; 
+    font-weight: bold; 
+    color: black;
+}
+
+ion-text{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    text-align: center;
+    color: black;
+}
+
+
+  ion-img{
+    height: 250px;
+  }
+
+.icon-images {
+    width: 55px;
+    height: 55px;
+}
+
+h3 {
+    margin-left: 13px;
+}

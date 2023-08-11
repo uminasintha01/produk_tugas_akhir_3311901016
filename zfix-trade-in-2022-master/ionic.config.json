@@ -1,0 +1,7 @@
+{
+  "name": "zfix_app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,273 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">Daftar Transaksi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content style="--background: #ccc url('../../../../assets/images/default/background.png') no-repeat center center / cover;">
+ 
+        <ion-card-content >
+          <div class="center" style="margin-left: 5%;">
+            <div *ngFor="let item of trLaptop">
+              <div class="row">
+                <div class="col">
+                  <ion-card style="width: 310px; height: 550px; border-radius: 3%; background: #3053A4;">
+                    <div *ngIf = "item.jenis_layanan == 2">
+                      <div class="title-header">Laptop</div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Brand</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.brand}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Memory</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.memory}} GB</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Storage</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.storages}} GB</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="color: #FFA95A;">
+                          <p style="font-size: 16px;">Price</p>
+                        </div>
+                        <div class="col" style="background-color: #284483; color: #87ABDD; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Rp.{{item.price | number}}</p>
+                        </div>
+                      </div>
+                      <div *ngIf = "item.status == 4" class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="background-color: #284483; color: #fbfbfb; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Transaksi Telah Selesai</p>
+                        </div>
+                      </div>
+                    </div>
+                  </ion-card>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div *ngFor="let item of trTV">
+                <div class="col">
+                  <ion-card style="width: 310px; height: 550px; border-radius: 3%; background: #3053A4;">
+                    <div *ngIf = "item.jenis_layanan == 3">
+                      <div class="title-header">TV</div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Brand</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.brand}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Jenis TV</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.jenis_tv}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Inch</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.inch}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="color: #FFA95A;">
+                          <p style="font-size: 16px;">Price</p>
+                        </div>
+                        <div class="col" style="background-color: #284483; color: #87ABDD; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Rp.{{item.price | number}}</p>
+                        </div>
+                      </div>
+                      <div *ngIf = "item.status == 4" class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="background-color: #284483; color: #fbfbfb; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Transaksi Telah Selesai</p>
+                        </div>
+                      </div>
+                    </div>
+                  </ion-card>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div *ngFor="let item of trPS">
+                <div class="col">
+                  <ion-card style="width: 310px; height: 550px; border-radius: 3%; background: #3053A4;">
+                    <div *ngIf = "item.jenis_layanan == 4">
+                      <div class="title-header">PS</div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Jenis</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.jenis_ps}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Type</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.type}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Storage</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.storages}} GB</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="color: #FFA95A;">
+                          <p style="font-size: 16px;">Price</p>
+                        </div>
+                        <div class="col" style="background-color: #284483; color: #87ABDD; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Rp.{{item.price | number}}</p>
+                        </div>
+                      </div>
+                      
+                      <div *ngIf = "item.status == 4" class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="background-color: #284483; color: #fbfbfb; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Transaksi Telah Selesai</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </ion-card>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div *ngFor="let item of trKulkas">
+                <div class="col">
+                  <ion-card style="width: 310px; height: 550px; border-radius: 3%; background: #3053A4;">
+                    <div *ngIf = "item.jenis_layanan == 5">
+                      <div class="title-header">Kulkas</div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Merk</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.brand}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Model</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.model}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Type</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.type}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="color: #FFA95A;">
+                          <p style="font-size: 16px;">Price</p>
+                        </div>
+                        <div class="col" style="background-color: #284483; color: #87ABDD; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Rp.{{item.price | number}}</p>
+                        </div>
+                      </div>
+                      
+                      <div *ngIf = "item.status == 4" class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="background-color: #284483; color: #fbfbfb; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Transaksi Telah Selesai</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </ion-card>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div *ngFor="let item of trMesinCuci">
+                <div class="col">
+                  <ion-card style="width: 310px; height: 550px; border-radius: 3%; background: #3053A4;">
+                    <div *ngIf = "item.jenis_layanan == 6">
+                      <div class="title-header">Mesin Cuci</div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Merk</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.brand}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
+                        <div class="col" style="color: white; text-align: left; margin-left: 12%;">
+                          <p style="font-size: 16px;">Type</p>
+                        </div>
+                        <div class="col" style="color: #87ABDD; text-align: right; margin-right: 12%;">
+                          <p style="font-size: 16px;">{{item.type}}</p>
+                        </div>
+                        <div class="putus"></div>
+                      </div>
+                      <div class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="color: #FFA95A;">
+                          <p style="font-size: 16px;">Price</p>
+                        </div>
+                        <div class="col" style="background-color: #284483; color: #87ABDD; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Rp.{{item.price | number}}</p>
+                        </div>
+                      </div>
+                      
+                      <div *ngIf = "item.status == 4" class="row text-center" style="margin-top: 30px; padding-top: 2%; margin-bottom: 50px;">
+                        <div class="col" style="background-color: #284483; color: #fbfbfb; padding-top: 2%; margin-right: 15%;">
+                          <p style="font-size: 16px;">Transaksi Telah Selesai</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </ion-card>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </ion-card-content>
+  </ion-content>
+    

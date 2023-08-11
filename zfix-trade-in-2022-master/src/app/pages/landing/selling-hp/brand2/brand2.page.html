@@ -1,0 +1,115 @@
+<ion-content style="--background: #ccc url('../../../../assets/images/default/background.png') no-repeat center center / cover;">
+  <div class="center">
+    <img src="../../../../assets/images/home/zfix.png" alt="" style="margin-top: 20%;">
+    <div class="middle">
+      <div class="title">Your Trade In</div>
+
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Brand" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ brand }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+  
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="RAM" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ ram }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+      
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Storage" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input value="{{ storages }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+  
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <ion-label>Lokasi Trade <ion-text color="danger">*</ion-text></ion-label>
+        <ion-select (ionChange)="this.lokasi_trade = $event.target.value">
+            <ion-select-option *ngFor="let item of stores" value="{{item.id}}">{{item.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      
+      <div class="row" style="margin-top: 60px;">
+        <div class="col">
+          <button class="button oval" routerLink="/landing/type" style=" background-color: #7f9ee5; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Cancel
+          </button>
+        </div>
+        <div class="col">
+          <button class="button oval" (click)="submit()" style="background-color: white; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Agree
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <ion-content style="--background: #ccc url('../../../../assets/images/default/background.png') no-repeat center center / cover;">
+  <div class="div-h1">
+    <h1>Your Trade In</h1>
+  </div>
+
+  <div class="content">
+    <ion-item style="--background: transparant; color: #3053A4;">
+      <ion-label>Brand <ion-text color="danger">*</ion-text></ion-label>
+      <ion-select (ionChange) = "this.brand = $event.target.value">
+        <ion-select-option  *ngFor="let row_brand of data_jenis" [value]="row_brand" placeholder="Pilih..">{{row_brand}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="row">
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="col" style="text-align: left;">
+          <ion-label>RAM</ion-label>
+        </div>
+        <div class="col" style="text-align: right;">
+          <ion-input value="{{ ram }}" readonly></ion-input>
+        </div>
+      </ion-item>
+    </div>
+    
+    <div class="row">
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="col" style="text-align: left;">
+          <ion-label>Storage</ion-label>
+        </div>
+        <div class="col" style="text-align: right;">
+          <ion-input value="{{ storages }}" readonly></ion-input>
+        </div>
+      </ion-item>
+    </div>
+
+    <ion-item style="--background: transparant; color: #3053A4;">
+      <ion-label>Lokasi Trade <ion-text color="danger">*</ion-text></ion-label>
+      <ion-select (ionChange)="this.lokasi_trade = $event.target.value">
+          <ion-select-option *ngFor="let item of stores" value="{{item.id}}">{{item.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="row" style="margin-top: 60px;">
+      <div class="col">
+        <ion-button shape="round" fill="outline" style=" --background:#BCCCF4; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" routerLink="/landing/type">Cancel</ion-button>
+      </div>
+      <div class="col">
+        <ion-button shape="round" style="--background:white; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" (click)="submit()">Next</ion-button>
+      </div>
+    </div>
+
+  </div>
+ 
+</ion-content> -->

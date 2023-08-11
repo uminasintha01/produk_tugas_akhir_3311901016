@@ -1,0 +1,51 @@
+.div-h1{
+    position: absolute;
+  }
+
+  .bg-image {
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  
+    &.top {
+    top:  0px;
+    transform: translateY(-30px);
+  
+    }
+  
+    &.bottom {
+    bottom: 0px;
+  
+    }
+  }
+
+  ion-content{
+    justify-content: center;
+    --padding-top: 20px;
+  }
+
+  .vl {
+    border-left: 6px solid blue;
+    height: 33px;
+  }
+
+  h2 {
+    padding-left: 10px;
+  }
+  
+  p{
+      padding-left: 10px;
+      font-size: 13px;
+  }
+
+  ion-searchbar{
+    --background: #FFF !important;
+    --border-radius: 10px !important;
+    transform: scale(1.1);
+    margin: 0 auto;
+    width: 90%; 
+    padding-top: 10px;
+  }

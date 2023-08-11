@@ -1,0 +1,158 @@
+<ion-content style="--background: #ccc url('../../../../assets/images/default/background.png') no-repeat center center / cover;">
+  <div class="center">
+    <img src="../../../../assets/images/home/zfix.png" alt="" style="margin-top: 20%;">
+    <div class="middle">
+      <div class="title">Your Trade In</div>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Merk</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ brand }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Jenis TV</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ jenis }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Ukuran</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ inch }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kondisi TV</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ kondisi_tv }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kondisi Layar</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ kondisi_layar }}"readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kondisi Layar Dalam</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ inner_valueSelected }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kondisi Layar Luar</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ outer_valueSelected }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kondisi Body</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ condition_valueSelected }}"donly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kondisi PORT Pada Smart TV</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ port }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item *ngIf="jenis=='Smart TV'" text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Wifi Pada Smart TV</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ wifi }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Suara TV</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ suara }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item text-wrap style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <p>Kelengkapan</p>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-textarea value="{{ addition_valueSelected }}" readonly></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+      
+
+      <ion-textarea style="color: #3053A4; margin-top: 20px;" value="Estimated Price" readonly></ion-textarea>
+      <button class="button round" style="background-color: #7f9ee5; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Rp.{{price | number}}</button>
+
+      <div class="row" style="margin-top: 60px;">
+        <div class="col">
+          <button class="button oval" routerLink="/landing/type" style=" background-color: #7f9ee5; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Cancel
+          </button>
+        </div>
+        <div class="col">
+          <button class="button oval" (click)="submit()" style="background-color: white; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Agree
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

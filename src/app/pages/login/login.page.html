@@ -1,0 +1,39 @@
+<ion-content class="background" [fullscreen]="true">
+  <ion-card>
+    <img src="../../../assets/images/zfix_logo.png" alt="" class="zfix">
+    <ion-card-header>
+       <ion-card-title>
+         ALL U CAN TRADE
+       </ion-card-title>
+       <ion-card-subtitle>
+         Aplikasi Trade In Terpecaya
+       </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      
+      <ion-item>
+        <ion-input placeholder="Email"  name="email" type="email" [(ngModel)]="credential.email" pattern="[A-Za-z0-9._%+-]{2,}@[a-zA-Z]{2,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Password" name="password" type="password" [(ngModel)]="credential.password" minlength="8" (keyup.enter)="hideKeyboard()" required></ion-input>
+      </ion-item>
+      <div class="botton-section">
+        <ion-button (click)="login() " routerLink="/login">Sign In</ion-button>
+      </div>
+      <a routerLink="/forgot-password">Forgot Password?</a>
+    
+      <div class="button-sigup">
+        <ion-button class="btn_signup" routerLink="/register">Sign Up</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <div class="bg-image" ><img  src="../../../assets/images/Lebar_bawah.svg" alt=""></div>
+ 
+ 
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="background">
+    <ion-title><a href="#" class="condition"> Term and Condition</a></ion-title>
+  </ion-toolbar>
+</ion-footer>

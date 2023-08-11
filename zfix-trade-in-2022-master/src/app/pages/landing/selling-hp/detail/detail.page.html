@@ -1,0 +1,160 @@
+<ion-content style="--background: #ccc url('../../../../assets/images/default/background.png') no-repeat center center / cover;">
+  <div class="center">
+    <img src="../../../../assets/images/home/zfix.png" alt="" style="margin-top: 20%;">
+    <div class="middle">
+      <div class="title">Your Trade In</div>
+
+      <ion-item style="--background: transparant; color: #3053A4; margin-top: 10px;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Brand" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input *ngFor="let x of deviceObj" value="{{ x.brand }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+  
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="RAM" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input *ngFor="let x of deviceObj" value="{{ x.ram }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+      
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="row">
+          <div class="col" style="text-align: left;">
+            <ion-input value="Storage" readonly></ion-input>
+          </div>
+          <div class="col" style="text-align: right;">
+            <ion-input *ngFor="let x of deviceObj" value="{{ x.storages }}" readonly></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-input style="color: #3053A4; margin-top: 20px;" value="Estimated Price" readonly></ion-input>
+      <button class="button round" style="background-color: #7f9ee5; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Rp.{{price}}</button>
+
+      <div class="row" style="margin-top: 60px;">
+        <div class="col">
+          <button class="button oval" routerLink="/landing/type" style=" background-color: #7f9ee5; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Cancel
+          </button>
+        </div>
+        <div class="col">
+          <button class="button oval" (click)="submit()" style="background-color: white; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Agree
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- <div class="div-h1">
+    <h1>Your Trade In</h1>
+  </div>
+
+  <div class="content">
+    <ion-item style="--background: transparant; color: #3053A4;">
+      <ion-label>Brand</ion-label>
+      <ion-input *ngFor="let x of deviceObj" value="{{ x.brand }}" readonly></ion-input>
+    </ion-item>
+
+    <div class="row">
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="col" style="text-align: left;">
+          <ion-label>RAM</ion-label>
+        </div>
+        <div class="col" style="text-align: right;">
+          <ion-input *ngFor="let x of deviceObj" value="{{ x.ram }}" readonly></ion-input>
+        </div>
+      </ion-item>
+    </div>
+    
+    <div class="row">
+      <ion-item style="--background: transparant; color: #3053A4;">
+        <div class="col" style="text-align: left;">
+          <ion-label>Storage</ion-label>
+        </div>
+        <div class="col" style="text-align: right;">
+          <ion-input *ngFor="let x of deviceObj" value="{{ x.storages }}" readonly></ion-input>
+        </div>
+      </ion-item>
+    </div>
+
+    <ion-item style="--background: transparant; color: #3053A4;">
+      <ion-label>Lokasi Trade </ion-label>
+      <ion-input *ngFor="let x of deviceObj" value="{{ x.location }}" readonly></ion-input>
+    </ion-item>
+
+    <div class="div-h1">
+      <h1>Estimated Price</h1>
+    </div>
+
+    <ion-input value="{{price}}" readonly>
+    </ion-input>
+
+    <div class="row" style="margin-top: 60px;">
+      <div class="col">
+        <ion-button shape="round" fill="outline" style=" --background:#BCCCF4; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" routerLink="/landing/type">Cancel</ion-button>
+      </div>
+      <div class="col">
+        <ion-button shape="round" style="--background:white; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" (click)="submit()">Next</ion-button>
+      </div>
+    </div>
+
+  </div> -->
+ 
+</ion-content>
+
+<!-- <ion-header class="header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="bg-white">
+  <div class="container bg-white">
+    <img class="bg-image top" src="../../../../assets/images/Lebar_atas.svg" alt="">
+    
+    <ion-card>
+      <ion-card-content>
+        <h1>Your Trade In</h1>
+
+        <ion-item mb-2>
+          <ion-input class="input-1" *ngFor="let x of deviceObj" value="{{x.brand}}" readonly></ion-input>
+        </ion-item>
+
+        <ion-item> 
+          <ion-input class="input-1" *ngFor="let x of deviceObj" value="{{x.ram}}" readonly></ion-input>
+        </ion-item>
+
+        <ion-item >
+          <ion-input  class="input-1" *ngFor="let x of deviceObj" value="{{x.storages}}" readonly ></ion-input>
+        </ion-item>
+        
+          <h3>Estimated Price</h3>
+          <ion-input value="{{price}}" readonly>
+          </ion-input>
+  
+          <button class="btn" (click)="submit()">Aggree</button>
+          <div class="a">
+            <a href="#" routerLink="/landing/type">Cancel</a>
+          </div>
+       
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+  <div class="shape"><img src="../../../assets/images/Lebar_bawah.svg" alt=""></div>
+ 
+</ion-content> -->

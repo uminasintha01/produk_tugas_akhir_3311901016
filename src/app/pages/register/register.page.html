@@ -1,0 +1,53 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background">
+ 
+  <ion-card>
+    <img src="../../../assets/images/zfix_logo.png" alt="" class="zfix">
+    <ion-card-header>
+       <ion-card-title>
+         Sign Up
+       </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input placeholder="Name" name="name" type="text" [(ngModel)]="credential.name" pattern="^\w+( +\w+)*$"  required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Mobile Phone" name="contact" type="text" [(ngModel)]="credential.contact" pattern="^\w+( +\w+)*$"  required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Email" name="email" type="email" [(ngModel)]="credential.email" pattern="[A-Za-z0-9._%+-]{2,}@[a-zA-Z]{2,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"  required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Password" name="password" type="password" [(ngModel)]="credential.password" minlength="8"  required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Confirm Password" name="confirm_password" type="password" [(ngModel)]="credential.confirm_password" minlength="8"  required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Address"  name="address" type="text" [(ngModel)]="credential.address" pattern="^\w+( +\w+)*$" required></ion-input>
+      </ion-item>
+      <input type="checkbox" id="option"/>
+      <ion-label for="option"> <span></span> I Agree to The Term and Condition </ion-label><br>
+      <div class="botton-section">
+        <ion-button (click)="register()">Sign Up</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <div class="shape"><img src="../../../assets/images/Lebar_bawah.svg" alt=""></div>
+ 
+ 
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar >
+   <a href="#" class="condition"> Already a Member? Sign in</a>
+  </ion-toolbar>
+</ion-footer>

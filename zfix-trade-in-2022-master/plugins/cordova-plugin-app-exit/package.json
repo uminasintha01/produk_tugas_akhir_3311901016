@@ -1,0 +1,57 @@
+{
+  "_from": "git+https://github.com/huangang/cordova-plugin-app-exit.git",
+  "_id": "cordova-plugin-app-exit@0.0.2",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-app-exit",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/huangang/cordova-plugin-app-exit.git",
+    "rawSpec": "git+https://github.com/huangang/cordova-plugin-app-exit.git",
+    "saveSpec": "git+https://github.com/huangang/cordova-plugin-app-exit.git",
+    "fetchSpec": "https://github.com/huangang/cordova-plugin-app-exit.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/huangang/cordova-plugin-app-exit.git#bd46b87f5bffa60e28c161509a66da585af6db97",
+  "_spec": "git+https://github.com/huangang/cordova-plugin-app-exit.git",
+  "_where": "C:\\Users\\ASUS\\Desktop\\zfix_app_angular_http_new7",
+  "author": {
+    "name": "huangang",
+    "email": "huangang.zhang@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/huangang/cordova-plugin-app-exit/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-app-exit",
+    "platforms": [
+      "android",
+      "ios",
+      "browser"
+    ]
+  },
+  "deprecated": false,
+  "description": "Implements navigator.app.exitApp on Android, iOS and browser",
+  "homepage": "https://github.com/huangang/cordova-plugin-app-exit#readme",
+  "keywords": [
+    "cordova",
+    "exit",
+    "terminate",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-app-exit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangang/cordova-plugin-app-exit.git"
+  },
+  "version": "0.0.2"
+}

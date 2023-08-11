@@ -1,0 +1,68 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>index</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <img class="bg-image" src="../../../../assets/images/home/bg_home.png" alt="">
+
+  <ion-item lines="none" class="current-user" color="transparent" routerLink="../../profile">
+    <ion-avatar>
+      <img src="./assets/images/z_logo.png">
+    </ion-avatar>
+    <ion-label class="ion-text-nowrap">
+      <p *ngIf="user != {}">Halo, {{ user.data?.user.name }}</p>
+    </ion-label>
+    <ion-icon name="chevron-forward-outline"></ion-icon> 
+  </ion-item>
+
+  <ion-card class="welcome-card">
+    <ion-item routerLink="../../history">
+      <ion-img src="./assets/images/setting_menu_cards.png" class="img-btn"></ion-img>
+      <ion-label class="ion-text-nowrap">
+        <p>Daftar Transaksi</p>
+      </ion-label>
+    </ion-item> 
+
+    <ion-item routerLink="../../outlet">
+      <ion-img src="./assets/images/setting_menu_outlets.png" class="img-btn"></ion-img>
+      <ion-label class="ion-text-nowrap">
+        <p>Lokasi Tukar Tambah</p>
+      </ion-label>
+    </ion-item> 
+    
+    <ion-item routerLink="../../call-us">
+      <ion-img src="./assets/images/setting_menu_contact.png" class="img-btn"></ion-img>
+      <ion-label class="ion-text-nowrap">
+        <p>Hubungi Kami</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item routerLink="../../privacy-policy">
+      <ion-img src="./assets/images/setting_menu_privacy.png" class="img-btn"></ion-img>
+      <ion-label class="ion-text-nowrap">
+        <p>Kebijakan Privasi</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item routerLink="../../terms">
+      <ion-img src="./assets/images/setting_menu_terms.png" class="img-btn"></ion-img> 
+      <ion-label class="ion-text-nowrap">
+        <p>Syarat & Ketentuan</p>
+      </ion-label>
+    </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-item (click)="logout()">
+    <ion-img src="./assets/images/setting_menu_logout.png" class="img-btn"></ion-img>
+    <ion-label class="ion-text-nowrap">
+      <p>Logout</p>
+    </ion-label> 
+  </ion-item>
+</ion-card>
+
+</ion-content>

@@ -1,0 +1,127 @@
+ion-content.background{
+  --ion-background-color:linear-gradient(#0f4ed8,#0099ff,rgb(184, 202, 250));
+  
+              ion-card{
+                      margin-top: 70px;
+                      background: transparent;
+                      box-shadow: none;
+                      text-align: center;
+                      
+                      .zfix{
+                        height: 40px;
+                        filter: drop-shadow(-1px -1px 2px rgba(255,255,2550.5) )
+                        drop-shadow(5px 5px 5px rgba(0,0,0,0.2))
+                       ;
+                      }
+  
+                      ion-card-title{
+                        margin-top: 26px;
+                          font-size:30px;
+                          color: #ffffff; 
+                              }
+  
+                      ion-card-subtitle{
+                          font-size:14px;
+                          color: #ffffff; 
+                             }
+                      ion-card-content{
+                        margin-top:30px;
+  
+                        ion-item{
+                          --ion-item-background:transparent;
+                          --border--width:0;
+                          --inner-border-width:0;
+  
+                          ion-input{
+                            border: 1px ;
+                            font-size: 14px;
+                            font-weight: 300;
+                            color: #fff;
+                            --padding-start:20px
+                                }  
+                        }
+                        a{
+                          text-decoration: none;
+                          color:#fff;
+                          font-weight: 300;
+                          font-size: 13px;
+                          text-align: center;
+                           }
+                           ion-button{
+                            margin-top:20px;
+                            height: 40px;
+                            width: 150px;
+                            font-size: 20px;
+                            text-transform: none;
+                            font-weight: 300;
+                            --background: rgb(255, 255, 255);
+                            --border-radius:20px !important;
+                            color:#B6B6B6;
+                            font-weight: bold;
+                           
+                            .botton-section{
+                             
+                              display: flex;
+                              flex-direction: column;
+                              align-items: center;
+                              
+                              
+                              
+                          }
+                        }
+                           
+                        ion-button.btn_signup{
+                          height: 40px;
+                          width: 150px;
+                          font-size: 20px;
+                          border: 1px solid #fff;
+                          text-transform: none;
+                          font-weight: 300;
+                          --background:transparent;
+                          border-radius:20px !important;
+                          color:#ffffff;
+                          font-weight: bold;
+                          box-shadow: transparent;
+                        .button-sigup{
+                          margin-top:19px;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                          box-shadow: none;
+                          
+                         
+                             
+                          }
+                          
+                      }
+  
+                      }
+                      
+                    }
+                    .bg-image {
+                      position: relative;
+                      bottom: -10%;
+                  
+                    }
+                    .bg-image img{
+                      width: 100%;
+                      height: auto;
+                    }
+                   
+                  
+              
+  }
+  
+ 
+  ion-toolbar.background {
+    text-align: center;
+    position: relative;
+    --ion-background-color:   rgb(53,123,203);
+    
+    .condition{
+      color: #fff;
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+  

@@ -1,0 +1,34 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">Lokasi Tukar Tambah</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img class="bg-image" src="../../../../assets/images/home/bg_home.png" alt="">
+
+  <div class="div-h1">
+    <div class="vl" style="font-family: 'Arial' !important; margin-left: 10px;">
+        <h2>Lokasi Tukar Tambah</h2>
+    </div>
+    <ion-text>
+      <p>Kami telah memiliki lokasi tukar tambah barang elektronik anda.</p>
+    </ion-text>
+
+    <ion-card *ngFor="let item of stores">
+      <ion-card-header>
+        <ion-card-title>{{item.name}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+       {{item.address}}
+      </ion-card-content>
+    </ion-card>
+
+    
+  </div>
+</ion-content>
+
